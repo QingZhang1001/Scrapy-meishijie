@@ -23,6 +23,8 @@ class MeishijieSpider(scrapy.Spider):
         item=ImgItem()
         item['image_urls'] = response.xpath('//img[@class="img"]//@src').extract()
         item['image_names'] = response.xpath('//div[@class="c1"]//strong//text()').extract()
+        #item['vc'] = response.xpath('//div[@class="c1"]//span//text()').extract()
+
         #print(len(item['image_urls']))
 
 
@@ -38,9 +40,6 @@ class MeishijieSpider(scrapy.Spider):
 
 
         yield item
-
-
-
 
         if next_link:
             next_link = next_link[0]

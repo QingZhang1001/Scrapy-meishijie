@@ -14,4 +14,5 @@ class ImgItem(scrapy.Item):
     cuisine_names = scrapy.Field()
     image_names = scrapy.Field()
     image_urls = scrapy.Field()
+    #vc = scrapy.Field()
     images=scrapy.Field()
